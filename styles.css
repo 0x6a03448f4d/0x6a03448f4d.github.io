@@ -418,20 +418,25 @@ body.dark .skill-bar {
 /* Tools */
 .tools-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
+    gap: 15px; 
     margin-top: 30px;
 }
 
 .tool-card {
     background: #B8C7CE;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     text-align: center;
     transition: all 0.3s ease;
     position: relative;
     text-decoration: none;
     color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px; 
 }
 
 body.dark .tool-card {
@@ -439,9 +444,14 @@ body.dark .tool-card {
 }
 
 .tool-card i {
-    font-size: 40px;
-    margin-bottom: 10px;
+    font-size: 30px; 
+    margin-bottom: 8px; 
     color: #3498DB;
+}
+
+.tool-card p {
+    font-size: 14px; 
+    margin: 0;
 }
 
 .tool-card:hover {
@@ -749,58 +759,7 @@ body.dark .watermark {
     color: rgba(214, 224, 240, 0.3);
 }
 
-/* Modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-}
 
-.modal-content {
-    background: #B8C7CE;
-    margin: 10% auto;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 700px;
-    max-height: 80vh;
-    overflow-y: auto;
-    position: relative;
-}
-
-body.dark .modal-content {
-    background: #1A2A44;
-}
-
-.modal-close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
-    cursor: pointer;
-    color: #2C3E50;
-}
-
-body.dark .modal-close {
-    color: #D6E0F0;
-}
-
-#modal-body {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-#modal-body h1, #modal-body h2, #modal-body h3 {
-    margin: 10px 0;
-    color: #3498DB;
-}
-
-/* Responsive */
 @media (max-width: 768px) {
     .sidebar {
         width: 280px;
@@ -849,7 +808,28 @@ body.dark .modal-close {
         transform: translateX(-50%);
     }
 
-    .projetos-grid, .tools-grid, .achievements-grid {
+    /* Updated Tools Grid for Mobile */
+    .tools-grid {
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); 
+        gap: 10px;
+        padding: 0 10px; 
+    }
+
+    .tool-card {
+        padding: 10px; 
+        min-height: 70px; 
+    }
+
+    .tool-card i {
+        font-size: 24px; 
+        margin-bottom: 5px;
+    }
+
+    .tool-card p {
+        font-size: 12px;
+    }
+
+    .projetos-grid, .achievements-grid {
         grid-template-columns: 1fr;
     }
 
