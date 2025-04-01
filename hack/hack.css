@@ -1,0 +1,89 @@
+body {
+    background: #1A1A1A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    color: #00FF00;
+}
+
+.terminal {
+    width: 80%;
+    max-width: 800px;
+    background: #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+    overflow: hidden;
+}
+
+.terminal-header {
+    background: #333333;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.red { background: #FF5555; }
+.yellow { background: #FFFF55; }
+.green { background: #55FF55; }
+
+.title {
+    color: #FFFFFF;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.terminal-body {
+    padding: 20px;
+    min-height: 300px;
+    max-height: 500px;
+    overflow-y: auto;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.terminal-input {
+    padding: 10px;
+    background: #111111;
+    display: flex;
+    gap: 10px;
+}
+
+#command {
+    flex: 1;
+    background: transparent;
+    border: 1px solid #00FF00;
+    color: #00FF00;
+    padding: 8px;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    outline: none;
+}
+
+#command:focus {
+    border-color: #FFFFFF;
+}
+
+button {
+    background: #00FF00;
+    color: #000000;
+    border: none;
+    padding: 8px 16px;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #FFFFFF;
+}
