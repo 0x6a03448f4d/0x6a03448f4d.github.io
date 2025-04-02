@@ -7,12 +7,14 @@
 
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    display: flex;
+    min-height: 100vh; /* Garante que o body ocupe a tela inteira */
     transition: background-color 0.3s, color 0.3s;
     overflow-x: hidden;
+    background: #CCD5D9; /* Light mode padrão */
+    color: #2C3E50;
 }
 
-/* Light Mode (Reverted) */
+/* Light Mode */
 body.light {
     background: #CCD5D9;
     color: #2C3E50;
@@ -21,8 +23,9 @@ body.light {
 /* Dark Mode */
 body.dark {
     background: #0D1423;
+    color: #D6E0F0;
 }
-    
+
 /* Sidebar */
 .sidebar {
     width: 280px;
@@ -33,6 +36,8 @@ body.dark {
     box-shadow: 4px 0 15px rgba(0,0,0,0.05);
     transition: transform 0.3s ease;
     z-index: 1000;
+    top: 0;
+    left: 0;
 }
 
 body.dark .sidebar {
@@ -231,9 +236,11 @@ input:checked + .slider:before {
 
 /* Main */
 main {
-    margin-left: 280px;
-    width: calc(100% - 280px);
+    margin-left: 280px; /* Espaço para a sidebar em telas grandes */
+    width: calc(100% - 280px); /* Ocupa o restante da largura */
     padding: 40px;
+    min-height: 100vh; /* Garante que o main ocupe a tela */
+    position: relative; /* Garante que fique no fluxo do documento */
 }
 
 /* Sections */
@@ -417,8 +424,8 @@ body.dark .skill-bar {
 /* Tools */
 .tools-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
-    gap: 15px; 
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
     margin-top: 30px;
 }
 
@@ -435,7 +442,7 @@ body.dark .skill-bar {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 80px; 
+    min-height: 80px;
 }
 
 body.dark .tool-card {
@@ -443,13 +450,13 @@ body.dark .tool-card {
 }
 
 .tool-card i {
-    font-size: 30px; 
-    margin-bottom: 8px; 
+    font-size: 30px;
+    margin-bottom: 8px;
     color: #3498DB;
 }
 
 .tool-card p {
-    font-size: 14px; 
+    font-size: 14px;
     margin: 0;
 }
 
@@ -694,20 +701,20 @@ body.dark .social-btn {
 
 /* Success Message */
 .success-message {
-    display: none; 
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #1A2A44; 
+    background: #1A2A44;
     color: #00FF00;
     padding: 20px 40px;
     border-radius: 10px;
     font-size: 20px;
     font-weight: 600;
-    font-family: 'Courier New', monospace; 
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); 
-    border: 2px solid #00FF00; 
+    font-family: 'Courier New', monospace;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+    border: 2px solid #00FF00;
     z-index: 1000;
     animation: popAndGlow 3s ease-in-out forwards;
 }
@@ -715,31 +722,31 @@ body.dark .social-btn {
 @keyframes popAndGlow {
     0% {
         opacity: 0;
-        transform: translate(-50%, -50%) scale(0.5); 
+        transform: translate(-50%, -50%) scale(0.5);
         box-shadow: 0 0 5px rgba(10, 67, 255, 0.2);
     }
     20% {
         opacity: 1;
-        transform: translate(-50%, -50%) scale(1.1); 
-        box-shadow: 0 0 20px rgba(0, 162, 255, 0.8); 
+        transform: translate(-50%, -50%) scale(1.1);
+        box-shadow: 0 0 20px rgba(0, 162, 255, 0.8);
     }
     40% {
         transform: translate(-50%, -50%) scale(1) rotate(5deg);
     }
     50% {
-        transform: translate(-50%, -50%) scale(1) rotate(0deg) skew(2deg); 
+        transform: translate(-50%, -50%) scale(1) rotate(0deg) skew(2deg);
     }
     60% {
         transform: translate(-50%, -50%) scale(1) rotate(-5deg);
     }
     80% {
         transform: translate(-50%, -50%) scale(1) rotate(0deg);
-        box-shadow: 0 0 15px rgba(0, 162, 255, 0.8); 
+        box-shadow: 0 0 15px rgba(0, 162, 255, 0.8);
         opacity: 1;
     }
     100% {
         opacity: 0;
-        transform: translate(-50%, -50%) scale(0.9); 
+        transform: translate(-50%, -50%) scale(0.9);
         box-shadow: 0 0 5px rgba(10, 67, 255, 0.2);
     }
 }
@@ -810,7 +817,7 @@ body.dark .watermark {
     color: rgba(214, 224, 240, 0.3);
 }
 
-
+/* Media Queries */
 @media (max-width: 768px) {
     .sidebar {
         width: 280px;
@@ -859,20 +866,19 @@ body.dark .watermark {
         transform: translateX(-50%);
     }
 
-    /* Updated Tools Grid for Mobile */
     .tools-grid {
-        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); 
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
         gap: 10px;
-        padding: 0 10px; 
+        padding: 0 10px;
     }
 
     .tool-card {
-        padding: 10px; 
-        min-height: 70px; 
+        padding: 10px;
+        min-height: 70px;
     }
 
     .tool-card i {
-        font-size: 24px; 
+        font-size: 24px;
         margin-bottom: 5px;
     }
 
