@@ -10,9 +10,10 @@ body {
     display: flex;
     transition: background-color 0.3s, color 0.3s;
     overflow-x: hidden;
+    background: none; 
 }
 
-/* Light Mode (Reverted) */
+/* Light Mode */
 body.light {
     background: #CCD5D9;
     color: #2C3E50;
