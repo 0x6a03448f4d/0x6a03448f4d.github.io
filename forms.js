@@ -42,11 +42,11 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
                 successMessage.style.display = 'none';
             }, 3000);
         } else {
-            throw new Error('Failed to send message');
+            return response.text().then(text => { throw new Error(`Failed to send: ${response.status} - ${text}`); });
         }
     })
     .catch(error => {
         console.error('Error:', error);
-        alert('There was an error sending your message. Please try again later.');
+        alert('There was an error sending your message: ' + error.message);
     });
 });
