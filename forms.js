@@ -4,7 +4,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const message = document.getElementById('message').value.trim();
-    const recaptchaResponse = grecaptcha.getResponse(); 
+    const recaptchaResponse = grecaptcha.getResponse();
 
     if (!name || !email || !message) {
         alert('Please fill all fields.');
@@ -25,7 +25,6 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     formData.append('message', message);
     formData.append('g-recaptcha-response', recaptchaResponse);
 
-    // Envio via AJAX
     fetch('https://formspree.io/f/SEU_ID', {
         method: 'POST',
         body: formData,
