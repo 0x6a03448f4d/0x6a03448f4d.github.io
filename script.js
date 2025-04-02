@@ -90,71 +90,31 @@ document.querySelectorAll("[data-count]").forEach(element => {
 });
 
 // Theme Switch Functionality
-const themeToggle = document.getElementById("theme-toggle");
-const body = document.body;
+document.addEventListener("DOMContentLoaded", () => {
+    const themeToggle = document.getElementById("theme-toggle");
+    const body = document.body;
 
-if (themeToggle) {
-    console.log("Theme toggle encontrado:", themeToggle); 
+    if (themeToggle) {
+        // Carrega o tema salvo ou usa "light" como padrão
+        const savedTheme = localStorage.getItem("theme") || "light";
+        body.classList.remove("light", "dark"); // Remove ambas as classes
+        body.classList.add(savedTheme);
+        themeToggle.checked = savedTheme === "dark";
 
-    const savedTheme = localStorage.getItem("theme") || "light";
-    console.log("Tema salvo carregado:", savedTheme); 
-    body.classList.remove("light", "dark"); 
-    body.classList.add(savedTheme);
-    themeToggle.checked = savedTheme === "dark";
-
-    // Evento de mudança de tema
-    themeToggle.addEventListener("change", () => {
-        console.log("Theme toggle alterado. Checked:", themeToggle.checked);
-        if (themeToggle.checked) {
-            body.classList.remove("light");
-            body.classList.add("dark");
-            localStorage.setItem("theme", "dark");
-            console.log("Mudou para dark mode"); 
-        } else {
-            body.classList.remove("dark");
-            body.classList.add("light");
-            localStorage.setItem("theme", "light");
-            console.log("Mudou para light mode"); 
-        }
-    });
-} else {
-    console.error("Theme toggle não encontrado! Verifique o ID 'theme-toggle' no HTML.");
-}
-
-// Sanitize and Handle Contact Form Output (Moved to forms.js, commented out here)
-/*
-const contactForm = document.getElementById("contact-form");
-const sanitizedOutput = document.getElementById("sanitized-output");
-
-function sanitizeInput(input) {
-    const div = document.createElement("div");
-    div.textContent = input;
-    return div.innerHTML.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/;/g, "&#59;");
-}
-
-if (contactForm && sanitizedOutput) {
-    contactForm.addEventListener("submit", e => {
-        e.preventDefault();
-        const name = sanitizeInput(document.getElementById("name").value);
-        const email = sanitizeInput(document.getElementById("email").value);
-        const message = sanitizeInput(document.getElementById("message").value);
-
-        sanitizedOutput.style.display = "block";
-        sanitizedOutput.innerHTML = `Name: ${name}<br>Email: ${email}<br>Message: ${message}`;
-
-        const data = { name, email, message, timestamp: new Date().toISOString() };
-        let storedData = JSON.parse(localStorage.getItem("formSubmissions") || "[]");
-        storedData.push(data);
-        localStorage.setItem("formSubmissions", JSON.stringify(storedData));
-
-        setTimeout(() => {
-            sanitizedOutput.style.display = "none";
-            alert("Form submitted successfully!");
-            contactForm.reset();
-        }, 1000);
-    });
-}
-*/
+        // Evento de mudança de tema
+        themeToggle.addEventListener("change", () => {
+            if (themeToggle.checked) {
+                body.classList.remove("light");
+                body.classList.add("dark");
+                localStorage.setItem("theme", "dark");
+            } else {
+                body.classList.remove("dark");
+                body.classList.add("light");
+                localStorage.setItem("theme", "light");
+            }
+        });
+    }
+});
 
 // Project Card Click Handler
 document.querySelectorAll(".projeto-card").forEach(card => {
@@ -179,9 +139,9 @@ if (modalClose && modal) {
             modal.style.display = "none";
         }
     });
-}
+});
 
-// Este arquivo pode ficar vazio ou incluir apenas funcionalidades básicas, se necessário
+// Navegação suave adicional
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
