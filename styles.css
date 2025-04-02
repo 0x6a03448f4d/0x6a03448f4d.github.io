@@ -718,12 +718,12 @@ body.dark .social-btn {
     0% {
         opacity: 0;
         transform: translate(-50%, -50%) scale(0.5); 
-        box-shadow: 0 0 5px rgba(0, 255, 0, 0.2);
+        box-shadow: 0 0 5px rgba(10, 67, 255, 0.2);
     }
     20% {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1.1); 
-        box-shadow: 0 0 20px rgba(0, 255, 0, 0.8); 
+        box-shadow: 0 0 20px rgba(0, 162, 255, 0.8); 
     }
     40% {
         transform: translate(-50%, -50%) scale(1) rotate(5deg);
@@ -736,13 +736,13 @@ body.dark .social-btn {
     }
     80% {
         transform: translate(-50%, -50%) scale(1) rotate(0deg);
-        box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+        box-shadow: 0 0 15px rgba(0, 162, 255, 0.8); 
         opacity: 1;
     }
     100% {
         opacity: 0;
         transform: translate(-50%, -50%) scale(0.9); 
-        box-shadow: 0 0 5px rgba(0, 255, 0, 0.2);
+        box-shadow: 0 0 5px rgba(10, 67, 255, 0.2);
     }
 }
 
