@@ -94,23 +94,31 @@ const themeToggle = document.getElementById("theme-toggle");
 const body = document.body;
 
 if (themeToggle) {
-    // Carrega o tema salvo ou usa "light" como padrão
+    console.log("Theme toggle encontrado:", themeToggle); 
+
     const savedTheme = localStorage.getItem("theme") || "light";
+    console.log("Tema salvo carregado:", savedTheme); 
+    body.classList.remove("light", "dark"); 
     body.classList.add(savedTheme);
     themeToggle.checked = savedTheme === "dark";
 
     // Evento de mudança de tema
     themeToggle.addEventListener("change", () => {
+        console.log("Theme toggle alterado. Checked:", themeToggle.checked);
         if (themeToggle.checked) {
             body.classList.remove("light");
             body.classList.add("dark");
             localStorage.setItem("theme", "dark");
+            console.log("Mudou para dark mode"); 
         } else {
             body.classList.remove("dark");
             body.classList.add("light");
             localStorage.setItem("theme", "light");
+            console.log("Mudou para light mode"); 
         }
     });
+} else {
+    console.error("Theme toggle não encontrado! Verifique o ID 'theme-toggle' no HTML.");
 }
 
 // Sanitize and Handle Contact Form Output (Moved to forms.js, commented out here)
