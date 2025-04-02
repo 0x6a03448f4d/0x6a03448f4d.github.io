@@ -3,11 +3,10 @@ const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
 const savedTheme = localStorage.getItem('theme') || 'light';
-body.classList.remove('light', 'dark'); 
-body.classList.add(savedTheme);
-themeToggle.checked = savedTheme === 'dark'; 
+body.classList.add(savedTheme); 
+themeToggle.checked = savedTheme === 'dark';
 
-// Change theme on toggle
+// Alterna o tema ao mudar o toggle
 themeToggle.addEventListener('change', function() {
     if (this.checked) {
         body.classList.remove('light');
