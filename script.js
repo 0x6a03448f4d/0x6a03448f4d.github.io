@@ -139,7 +139,7 @@ if (modalClose && modal) {
             modal.style.display = "none";
         }
     });
-});
+};
 
 // Navegação suave adicional
 document.querySelectorAll('.nav-link').forEach(link => {

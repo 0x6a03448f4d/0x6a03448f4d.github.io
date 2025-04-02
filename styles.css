@@ -23,7 +23,7 @@ body.light {
 /* Dark Mode */
 body.dark {
     background: #0D1423;
-    color: #D6E0F0;
+    color: #FFFFFF;
 }
 
 /* Sidebar */
@@ -827,6 +827,7 @@ body.dark .watermark {
         left: -280px;
         transform: translateX(0);
         transition: transform 0.3s ease;
+        z-index: 1000; /* Garante que a sidebar fique acima do main */
     }
 
     .sidebar.active {
@@ -837,6 +838,8 @@ body.dark .watermark {
         margin-left: 0;
         width: 100%;
         padding: 20px;
+        position: relative; /* Mantém o main no fluxo */
+        z-index: 500; /* Menor que a sidebar, mas visível */
     }
 
     .mobile-toggle.mobile-open {
