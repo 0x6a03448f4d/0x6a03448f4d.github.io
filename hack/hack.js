@@ -1,1 +1,139 @@
-const i=b;(function(c,d){const h=b,e=c();while(!![]){try{const f=-parseInt(h(0x107))/0x1+-parseInt(h(0x125))/0x2*(-parseInt(h(0x119))/0x3)+parseInt(h(0x130))/0x4*(-parseInt(h(0x121))/0x5)+-parseInt(h(0x124))/0x6+parseInt(h(0x10e))/0x7*(-parseInt(h(0x12f))/0x8)+parseInt(h(0x106))/0x9*(-parseInt(h(0x11e))/0xa)+-parseInt(h(0x136))/0xb*(-parseInt(h(0x110))/0xc);if(f===d)break;else e['push'](e['shift']());}catch(g){e['push'](e['shift']());}}}(a,0x92385));const output=document[i(0x13c)](i(0x108)),commandInput=document[i(0x13c)](i(0x126));let step=0x0;const password='admin',target=i(0x10f),secretFile=i(0x111),memeLeak=[i(0x10b),'evil_laugh.gif\x20-\x20\x27When\x20the\x20firewall\x20fails\x27',i(0x117)];function print(c,d=0x0){setTimeout(()=>{const j=b,e=document['createElement'](j(0x12a));e[j(0x12b)]=c,output['appendChild'](e),output[j(0x113)]=output['scrollHeight'];},d);}function clearInput(){commandInput['value']='';}function a(){const o=['5tGSjie','key','\x20\x20-\x20\x22cat\x20flag.txt\x22\x20:\x20Leak\x20their\x20secret\x20memes!','5132460VfAooQ','1394FqqKzm','command','toLowerCase','cat\x20flag.txt','Dumping\x20Evil\x20Corp’s\x20secret\x20meme\x20vault:','div','textContent','Try\x20\x22ping\x20evilcorp.com\x22\x20to\x20breach\x20the\x20network.','reset','ping\x20evilcorp.com','312ZAIsJO','69952bRdtEB','Try\x20this\x20real\x20command:\x20\x22whoami\x22','Wrong\x20password:\x20\x22','[64\x20bytes]\x20Reply\x20from\x20192.168.1.1:\x20time=39ms','Type\x20\x22reset\x22\x20to\x20play\x20again.','\x20\x20-\x20\x22whoami\x22\x20:\x20Check\x20who\x20you\x20are.','35745127UPRXoO','Resetting\x20terminal...','\x20===','addEventListener','Ping\x20successful!\x20Firewall\x20down!','...','getElementById','Objective:\x20Break\x20into\x20the\x20Evil\x20Corp\x20system.','Hint:\x20The\x20password\x20is\x20\x22admin\x22\x20(they’re\x20not\x20very\x20clever).','forEach','\x22\x20not\x20recognized.','Now,\x20grab\x20their\x20secret\x20stash.','Command\x20\x22','81QvSNQz','1097660yuQmzS','output','value','Leak\x20complete!\x20Evil\x20Corp\x20is\x20doomed!\x20','dank_meme_01.jpg\x20-\x20\x27CEO\x20crying\x20in\x20binary\x27','Let’s\x20see\x20who’s\x20behind\x20this\x20operation.','\x20\x20-\x20Type\x20\x22admin\x22\x20to\x20log\x20in.','50827cxOsiZ','evilcorp.com','12mzRAND','flag.txt','Mission\x20Complete','scrollTop','keypress','Accessing\x20','help','hackerman.png\x20-\x20\x27Me\x20right\x20now\x27','Try\x20\x22cat\x20flag.txt\x22\x20to\x20leak\x20the\x20memes!','558fyAeHY','Password\x20accepted!\x20Logging\x20in...','[64\x20bytes]\x20Reply\x20from\x20192.168.1.1:\x20time=42ms','Network\x20Breached','Enter','585050wxpwEv','User\x20Check','Welcome,\x20sneaky\x20hacker!'];a=function(){return o;};return a();}function printSectionHeader(c){const k=i;print('\x20'),print('===\x20'+c+k(0x138)),print('\x20');}function printHelp(){const l=i;print('\x20'),print('Available\x20commands:');switch(step){case 0x0:print(l(0x10d));break;case 0x1:print(l(0x135));break;case 0x2:print('\x20\x20-\x20\x22ping\x20evilcorp.com\x22\x20:\x20Breach\x20their\x20network!');break;case 0x3:print(l(0x123));break;}print('\x20\x20-\x20\x22help\x22\x20:\x20Show\x20this\x20help.'),print('\x20');}function processCommand(){const m=i,c=commandInput[m(0x109)]['trim']()[m(0x127)]();clearInput(),print('\x20'),print('>\x20'+c);switch(step){case 0x0:printSectionHeader('System\x20Login'),print(m(0x13d)),print(m(0x13e)),print('\x20'),print('>\x20Enter\x20password:'),step++;break;case 0x1:if(c===password)print(m(0x11a)),print(m(0x120),0x1f4),printSectionHeader(m(0x11f)),print(m(0x10c)),print(m(0x131)),print('\x20'),step++;else{print(m(0x132)+c+'\x22'),print('Hint:\x20It’s\x20\x22admin\x22\x20–\x20top\x20secret\x20stuff!'),print('\x20');if(c===m(0x116))printHelp();}break;case 0x2:if(c===m(0x12e))print('Pinging\x20'+target+m(0x13b)),print(m(0x11b),0x1f4),print(m(0x133),0x2ee),print(m(0x13a),0x3e8),print('You’re\x20in\x20the\x20Evil\x20Corp\x20network!',0x5dc),printSectionHeader(m(0x11c)),print(m(0x104)),print('Try\x20this\x20real\x20command:\x20\x22cat\x20flag.txt\x22'),print('\x20'),step++;else c==='help'?printHelp():(print(m(0x105)+c+m(0x103)),print(m(0x12c)),print('\x20'));break;case 0x3:if(c===m(0x128))print(m(0x115)+secretFile+m(0x13b)),print(m(0x129),0x1f4),memeLeak[m(0x102)]((d,e)=>{print('\x20\x20-\x20'+d,0x3e8+e*0x1f4);}),print(m(0x10a),0x9c4),printSectionHeader(m(0x112)),print('You’ve\x20hacked\x20Evil\x20Corp\x20and\x20leaked\x20their\x20memes!'),print(m(0x134)),print('\x20');else{if(c===m(0x12d))print(m(0x137)),output['innerHTML']='',step=0x0,setTimeout(processCommand,0x3e8);else c==='help'?printHelp():(print(m(0x105)+c+m(0x103)),print(m(0x118)),print('\x20'));}break;}}function b(c,d){const e=a();return b=function(f,g){f=f-0x102;let h=e[f];return h;},b(c,d);}commandInput[i(0x139)](i(0x114),c=>{const n=i;if(c[n(0x122)]===n(0x11d))processCommand();}),processCommand();
+const output = document.getElementById('output');
+const commandInput = document.getElementById('command');
+let step = 0;
+const password = "admin"; 
+const target = "evilcorp.com"; 
+const secretFile = "flag.txt";
+const memeLeak = [
+    "dank_meme_01.jpg - 'CEO crying in binary'",
+    "evil_laugh.gif - 'When the firewall fails'",
+    "hackerman.png - 'Me right now'"
+]; 
+
+function print(text, delay = 0) {
+    setTimeout(() => {
+        const line = document.createElement('div');
+        line.textContent = text;
+        output.appendChild(line);
+        output.scrollTop = output.scrollHeight;
+    }, delay);
+}
+
+function clearInput() {
+    commandInput.value = '';
+}
+
+function printSectionHeader(title) {
+    print(' ');
+    print('=== ' + title + ' ===');
+    print(' ');
+}
+
+function printHelp() {
+    print(' ');
+    print('Available commands:');
+    switch (step) {
+        case 0:
+            print('  - Type "admin" to log in.');
+            break;
+        case 1:
+            print('  - "whoami" : Check who you are.');
+            break;
+        case 2:
+            print('  - "ping evilcorp.com" : Breach their network!');
+            break;
+        case 3:
+            print('  - "cat flag.txt" : Leak their secret memes!');
+            break;
+    }
+    print('  - "help" : Show this help.');
+    print(' ');
+}
+
+function processCommand() {
+    const command = commandInput.value.trim().toLowerCase();
+    clearInput();
+    print(' ');
+    print('> ' + command);
+
+    switch (step) {
+        case 0: //  login
+            printSectionHeader('System Login');
+            print('Objective: Break into the Evil Corp system.');
+            print('Hint: The password is "admin" (they’re not very clever).');
+            print(' ');
+            print('> Enter password:');
+            step++;
+            break;
+
+        case 1: // check password
+            if (command === password) {
+                print('Password accepted! Logging in...');
+                print('Welcome, sneaky hacker!', 500);
+                printSectionHeader('User Check');
+                print('Let’s see who’s behind this operation.');
+                print('Try this real command: "whoami"');
+                print(' ');
+                step++;
+            } else {
+                print('Wrong password: "' + command + '"');
+                print('Hint: It’s "admin" – top secret stuff!');
+                print(' ');
+                if (command === 'help') printHelp();
+            }
+            break;
+
+        case 2: // breaching the network
+            if (command === 'ping evilcorp.com') {
+                print('Pinging ' + target + '...');
+                print('[64 bytes] Reply from 192.168.1.1: time=42ms', 500);
+                print('[64 bytes] Reply from 192.168.1.1: time=39ms', 750);
+                print('Ping successful! Firewall down!', 1000);
+                print('You’re in the Evil Corp network!', 1500);
+                printSectionHeader('Network Breached');
+                print('Now, grab their secret stash.');
+                print('Try this real command: "cat flag.txt"');
+                print(' ');
+                step++;
+            } else if (command === 'help') {
+                printHelp();
+            } else {
+                print('Command "' + command + '" not recognized.');
+                print('Try "ping evilcorp.com" to breach the network.');
+                print(' ');
+            }
+            break;
+
+        case 3: // leak memes
+            if (command === 'cat flag.txt') {
+                print('Accessing ' + secretFile + '...');
+                print('Dumping Evil Corp’s secret meme vault:', 500);
+                memeLeak.forEach((meme, index) => {
+                    print('  - ' + meme, 1000 + index * 500);
+                });
+                print('Leak complete! Evil Corp is doomed! ', 2500);
+                printSectionHeader('Mission Complete');
+                print('You’ve hacked Evil Corp and leaked their memes!');
+                print('Type "reset" to play again.');
+                print(' ');
+            } else if (command === 'reset') {
+                print('Resetting terminal...');
+                output.innerHTML = '';
+                step = 0;
+                setTimeout(processCommand, 1000);
+            } else if (command === 'help') {
+                printHelp();
+            } else {
+                print('Command "' + command + '" not recognized.');
+                print('Try "cat flag.txt" to leak the memes!');
+                print(' ');
+            }
+            break;
+    }
+}
+
+commandInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') processCommand();
+});
+
+processCommand();
