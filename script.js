@@ -89,6 +89,30 @@ document.querySelectorAll("[data-count]").forEach(element => {
     countObserver.observe(parent);
 });
 
+// Theme Switch Functionality
+const themeToggle = document.getElementById("theme-toggle");
+const body = document.body;
+
+if (themeToggle) {
+    // Carrega o tema salvo ou usa "light" como padrão
+    const savedTheme = localStorage.getItem("theme") || "light";
+    body.classList.add(savedTheme);
+    themeToggle.checked = savedTheme === "dark";
+
+    // Evento de mudança de tema
+    themeToggle.addEventListener("change", () => {
+        if (themeToggle.checked) {
+            body.classList.remove("light");
+            body.classList.add("dark");
+            localStorage.setItem("theme", "dark");
+        } else {
+            body.classList.remove("dark");
+            body.classList.add("light");
+            localStorage.setItem("theme", "light");
+        }
+    });
+}
+
 // Sanitize and Handle Contact Form Output (Moved to forms.js, commented out here)
 /*
 const contactForm = document.getElementById("contact-form");
