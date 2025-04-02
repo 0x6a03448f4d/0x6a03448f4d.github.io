@@ -10,10 +10,9 @@ body {
     display: flex;
     transition: background-color 0.3s, color 0.3s;
     overflow-x: hidden;
-    background: none; 
 }
 
-/* Light Mode */
+/* Light Mode (Reverted) */
 body.light {
     background: #CCD5D9;
     color: #2C3E50;
@@ -22,9 +21,8 @@ body.light {
 /* Dark Mode */
 body.dark {
     background: #0D1423;
-    color: #D6E0F0;
 }
-
+    
 /* Sidebar */
 .sidebar {
     width: 280px;
